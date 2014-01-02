@@ -32,6 +32,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     Changelog.txt:system/etc/CHANGELOG.txt
 
+# HFM Files
+PRODUCT_COPY_FILES += \
+	vendor/psd/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+	vendor/psd/prebuilt/etc/hosts.og:system/etc/hosts.og
+
 # Gapps backup script
 # PRODUCT_COPY_FILES += \
 #    vendor/$(VENDOR)/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
