@@ -6,3 +6,5 @@ endif
 
 export BUILD_DATE := $(shell date -u +%Y%m%d)
 export PSD_VERSION := $(PSD_VERSION)-$(BUILD_DATE)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.$(VENDOR_PSD).version=$(PSD_VERSION)
