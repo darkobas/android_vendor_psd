@@ -75,9 +75,6 @@ endif
 ifeq (psd_moto_msm8960dt,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_moto_msm8960dt.mk
 endif
-ifeq (psd_moto_msm8960,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_moto_msm8960.mk
-endif
 ifeq (psd_n7000,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_n7000.mk
 endif
