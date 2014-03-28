@@ -12,6 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq (psd_a510,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_a510.mk
+endif
+ifeq (psd_a700,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_a700.mk
+endif
 ifeq (psd_d2lte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_d2lte.mk
 endif
@@ -32,6 +38,9 @@ ifeq (psd_dlx,$(TARGET_PRODUCT))
 endif
 ifeq (psd_e975,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_e975.mk
+endif
+ifeq (psd_evita,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_evita.mk
 endif
 ifeq (psd_galaxysmtd,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_galaxysmtd.mk
@@ -69,17 +78,29 @@ endif
 ifeq (psd_m7,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_m7.mk
 endif
+ifeq (psd_meliusltexx,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_meliusltexx.mk
+endif
 ifeq (psd_moto_msm8960,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_moto_msm8960.mk
 endif
 ifeq (psd_moto_msm8960dt,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_moto_msm8960dt.mk
 endif
+ifeq (psd_n5100,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_n5100.mk
+endif
+ifeq (psd_n5110,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_n5110.mk
+endif
 ifeq (psd_n7000,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_n7000.mk
 endif
 ifeq (psd_n7100,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_n7100.mk
+endif
+ifeq (psd_odin,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_odin.mk
 endif
 ifeq (psd_p880,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_p880.mk
