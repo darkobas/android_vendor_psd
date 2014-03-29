@@ -60,6 +60,9 @@ endif
 ifeq (psd_i605,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_i605.mk
 endif
+ifeq (psd_i9100,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_i9100.mk
+endif
 ifeq (psd_i9300,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_i9300.mk
 endif
