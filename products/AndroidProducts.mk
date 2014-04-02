@@ -84,6 +84,9 @@ endif
 ifeq (psd_meliusltexx,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_meliusltexx.mk
 endif
+ifeq (psd_mint,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_mint.mk
+endif
 ifeq (psd_moto_msm8960,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_moto_msm8960.mk
 endif
