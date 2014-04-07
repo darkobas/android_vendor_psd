@@ -42,6 +42,9 @@ endif
 ifeq (psd_evita,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_evita.mk
 endif
+ifeq (psd_falcon,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_falcon.mk
+endif
 ifeq (psd_galaxysmtd,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_galaxysmtd.mk
 endif
@@ -53,6 +56,9 @@ ifeq (psd_geeb,$(TARGET_PRODUCT))
 endif
 ifeq (psd_hercules,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_hercules.mk
+endif
+ifeq (psd_hikari,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_hikari.mk
 endif
 ifeq (psd_hlte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_hlte.mk
@@ -68,6 +74,12 @@ ifeq (psd_i9300,$(TARGET_PRODUCT))
 endif
 ifeq (psd_i9500,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_i9500.mk
+endif
+ifeq (psd_jem,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_jem.mk
+endif
+ifeq (psd_jemlte,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_jemlte.mk
 endif
 ifeq (psd_jflte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_jflte.mk
@@ -108,6 +120,9 @@ endif
 ifeq (psd_n7100,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_n7100.mk
 endif
+ifeq (psd_nozomi,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_nozomi.mk
+endif
 ifeq (psd_odin,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_odin.mk
 endif
@@ -116,6 +131,9 @@ ifeq (psd_p880,$(TARGET_PRODUCT))
 endif
 ifeq (psd_skyrocket,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_skyrocket.mk
+endif
+ifeq (psd_tate,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_tate.mk
 endif
 ifeq (psd_togari,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_togari.mk
