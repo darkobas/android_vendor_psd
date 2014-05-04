@@ -11,7 +11,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Remix packages
 PRODUCT_PACKAGES += \
-    DashClock \
+    LockClock \
     Trebuchet \
     DSPManager \
     libcyanogen-dsp \
