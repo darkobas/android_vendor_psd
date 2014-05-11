@@ -81,6 +81,9 @@ endif
 ifeq (psd_jemlte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_jemlte.mk
 endif
+ifeq (psd_jewel,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_jewel.mk
+endif
 ifeq (psd_jflte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_jflte.mk
 endif
@@ -131,6 +134,9 @@ ifeq (psd_p880,$(TARGET_PRODUCT))
 endif
 ifeq (psd_skyrocket,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_skyrocket.mk
+endif
+ifeq (psd_taoshan,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_taoshan.mk
 endif
 ifeq (psd_tate,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_tate.mk
