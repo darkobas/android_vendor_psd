@@ -54,6 +54,9 @@ endif
 ifeq (psd_geeb,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_geeb.mk
 endif
+ifeq (psd_haida,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_haida.mk
+endif
 ifeq (psd_hercules,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_hercules.mk
 endif
