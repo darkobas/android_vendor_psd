@@ -11,7 +11,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Remix packages
 PRODUCT_PACKAGES += \
-    LockClock \
     Trebuchet \
     DSPManager \
     libcyanogen-dsp \
