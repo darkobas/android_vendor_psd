@@ -44,3 +44,4 @@ ifneq ($(SM_ARM_VERSION),)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sm.arm=$(SM_ARM_VERSION)
 endif
+USE_SABER_LINUX := yes
