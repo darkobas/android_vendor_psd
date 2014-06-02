@@ -80,4 +80,5 @@ else
 		libstagefright_mp3dec \
 		libjni_filtershow_filters \
 		libwebrtc_spl
+endif
 # end graphite support
