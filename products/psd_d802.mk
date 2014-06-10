@@ -24,13 +24,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 # Set -fstrict-aliasing flag to global for hammerhead
-#MAKE_STRICT_GLOBAL := true
+MAKE_STRICT_GLOBAL := true
 
 # Optimize memory
 OPT_MEMORY := true
 
 # Enable graphite
-#ENABLE_GRAPHITE := true
+ENABLE_GRAPHITE := true
 
 # Saber linux toolchains
-#USING_SABER_LINUX := yes
+USING_SABER_LINUX := yes
