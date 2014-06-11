@@ -31,7 +31,9 @@ endif
 DISABLE_STRICT_MODULES += \
         libbusybox \
         recovery_e2fsck \
-        libfuse
+        libfuse \
+        libandroid_runtime
+
 
 DISABLE_STRICT_MODULES := \
 		$(DISABLE_STRICT_MODULES)
