@@ -27,18 +27,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sm.arm=$(SM_ARM_VERSION)
 endif
 
-# Include Paranoid SaberDroid common configuration
-include vendor/psd/main.mk
-
-# Set -fstrict-aliasing flag to global for hammerhead
-MAKE_STRICT_GLOBAL := true
-
 DISABLE_GRAPHITE_MODULES += \
         libavcodec
 DISABLE_STRICT_MODULES += \
         libbusybox \
         recovery_e2fsck \
         libfuse
+
+# Include Paranoid SaberDroid common configuration
+include vendor/psd/main.mk
+
+# Set -fstrict-aliasing flag to global for hammerhead
+MAKE_STRICT_GLOBAL := true
 
 # Optimize memory
 OPT_MEMORY := true
