@@ -28,13 +28,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 # Disable strict aliasing modules
-DISABLE_STRICT_MODULES := \
+DISABLE_STRICT_MODULES += \
         libbusybox \
         recovery_e2fsck \
         libfuse
 
-# Add other categories to common list to pass onto build repo
-DISABLE_STRICT_MODULES += \
+DISABLE_STRICT_MODULES := \
 		$(DISABLE_STRICT_MODULES)
 
 # Include Paranoid SaberDroid common configuration
