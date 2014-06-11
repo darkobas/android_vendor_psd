@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_i9100.mk)
 $(call inherit-product, device/samsung/i9100/full_i9100.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_i9100
+PRODUCT_NAME := psd_i9100
 PRODUCT_DEVICE := i9100
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung

@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_n7000.mk)
 $(call inherit-product, device/samsung/n7000/full_n7000.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_n7000
+PRODUCT_NAME := psd_n7000
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := Galaxy Note
 PRODUCT_MANUFACTURER := Samsung

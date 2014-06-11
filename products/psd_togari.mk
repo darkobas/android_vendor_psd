@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_togari.mk)
 $(call inherit-product, device/sony/togari/full_togari.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_togari
+PRODUCT_NAME := psd_togari
 PRODUCT_DEVICE := togari
 PRODUCT_BRAND := sony
 PRODUCT_MANUFACTURER := Sony

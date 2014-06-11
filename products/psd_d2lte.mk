@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_d2lte.mk)
 $(call inherit-product, device/samsung/d2lte/full_d2lte.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_d2lte
+PRODUCT_NAME := psd_d2lte
 PRODUCT_DEVICE := d2lte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung

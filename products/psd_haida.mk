@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_haida.mk)
 $(call inherit-product, device/semc/haida/full_haida.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_haida
+PRODUCT_NAME := psd_haida
 PRODUCT_DEVICE := haida
 PRODUCT_BRAND := SEMC
 PRODUCT_MANUFACTURER := Sony Ericsson

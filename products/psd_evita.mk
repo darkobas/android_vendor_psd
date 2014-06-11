@@ -15,7 +15,7 @@ $(call inherit-product, vendor/pa/products/pa_evita.mk)
 $(call inherit-product, device/htc/evita/device.mk)
 
 # Device naming
-PRODUCT_NAME := pa_evita
+PRODUCT_NAME := psd_evita
 PRODUCT_DEVICE := evita
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := One X

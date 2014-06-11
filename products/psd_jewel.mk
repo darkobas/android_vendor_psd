@@ -13,7 +13,7 @@ $(call inherit-product, device/htc/jewel/jewel.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := jewel
-PRODUCT_NAME := pa_jewel
+PRODUCT_NAME := psd_jewel
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := EVO
 PRODUCT_MANUFACTURER := HTC

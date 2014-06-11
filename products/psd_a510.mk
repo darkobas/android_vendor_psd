@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_a510.mk)
 $(call inherit-product, device/acer/a510/full_a510.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_a510
+PRODUCT_NAME := psd_a510
 PRODUCT_DEVICE := a510
 PRODUCT_BRAND := Acer
 PRODUCT_MODEL := A510

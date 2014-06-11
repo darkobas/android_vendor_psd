@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_melius3gxx.mk)
 $(call inherit-product, device/samsung/melius3gxx/full_melius3gxx.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_melius3gxx
+PRODUCT_NAME := psd_melius3gxx
 PRODUCT_DEVICE := melius3gxx
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung

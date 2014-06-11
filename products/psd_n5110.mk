@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_n5110.mk)
 $(call inherit-product, device/samsung/n5110/full_n5110.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_n5110
+PRODUCT_NAME := psd_n5110
 PRODUCT_DEVICE := n5110
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung

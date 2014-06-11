@@ -16,7 +16,7 @@ TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_taoshan
+PRODUCT_NAME := psd_taoshan
 PRODUCT_DEVICE := taoshan
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony

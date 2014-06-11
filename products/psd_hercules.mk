@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_hercules.mk)
 $(call inherit-product, device/samsung/hercules/full_hercules.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_hercules
+PRODUCT_NAME := psd_hercules
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SGH-T989
 PRODUCT_MANUFACTURER := Samsung

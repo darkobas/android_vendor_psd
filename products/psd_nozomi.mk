@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_nozomi.mk)
 $(call inherit-product, device/sony/nozomi/full_nozomi.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_nozomi
+PRODUCT_NAME := psd_nozomi
 PRODUCT_DEVICE := nozomi
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony

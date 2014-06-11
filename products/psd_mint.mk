@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_mint.mk)
 $(call inherit-product, device/sony/mint/full_mint.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_mint
+PRODUCT_NAME := psd_mint
 PRODUCT_DEVICE := mint
 PRODUCT_BRAND := sony
 PRODUCT_MANUFACTURER := Sony

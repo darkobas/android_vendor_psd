@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_p880.mk)
 $(call inherit-product, device/lge/p880/full_p880.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_p880
+PRODUCT_NAME := psd_p880
 PRODUCT_DEVICE := p880
 PRODUCT_BRAND := lge
 PRODUCT_MANUFACTURER := lge

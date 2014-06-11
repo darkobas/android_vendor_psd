@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_odin.mk)
 $(call inherit-product, device/sony/odin/full_odin.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_odin
+PRODUCT_NAME := psd_odin
 PRODUCT_DEVICE := odin
 PRODUCT_BRAND := sony
 PRODUCT_MANUFACTURER := Sony

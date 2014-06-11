@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_skyrocket.mk)
 $(call inherit-product, device/samsung/skyrocket/full_skyrocket.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_skyrocket
+PRODUCT_NAME := psd_skyrocket
 PRODUCT_DEVICE := skyrocket
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung

@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_yuga.mk)
 $(call inherit-product, device/sony/yuga/full_yuga.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_yuga
+PRODUCT_NAME := psd_yuga
 PRODUCT_DEVICE := yuga
 PRODUCT_BRAND := sony
 PRODUCT_MANUFACTURER := Sony

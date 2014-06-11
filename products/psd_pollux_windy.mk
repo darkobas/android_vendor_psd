@@ -46,7 +46,7 @@ $(call inherit-product, vendor/pa/products/pa_pollux_windy.mk)
 $(call inherit-product, device/sony/pollux_windy/full_pollux_windy.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_pollux_windy
+PRODUCT_NAME := psd_pollux_windy
 PRODUCT_DEVICE := pollux_windy
 PRODUCT_BRAND := sony
 PRODUCT_MANUFACTURER := Sony 

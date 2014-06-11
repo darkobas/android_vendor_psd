@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_hikari.mk)
 $(call inherit-product, device/sony/hikari/full_hikari.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_hikari
+PRODUCT_NAME := psd_hikari
 PRODUCT_DEVICE := hikari
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony

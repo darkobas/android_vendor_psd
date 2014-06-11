@@ -56,7 +56,7 @@ $(call inherit-product, vendor/pa/products/pa_i9500.mk)
 $(call inherit-product, device/samsung/i9500/full_i9500.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_i9500
+PRODUCT_NAME := psd_i9500
 PRODUCT_DEVICE := i9500
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung

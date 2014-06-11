@@ -13,7 +13,7 @@ $(call inherit-product, device/htc/dlx/full_dlx.mk)
 
 # Override AOSP build properties
 PRODUCT_DEVICE := dlx
-PRODUCT_NAME := pa_dlx
+PRODUCT_NAME := psd_dlx
 PRODUCT_BRAND := Verizon
 PRODUCT_MODEL := HTC6435LVW
 PRODUCT_MANUFACTURER := HTC

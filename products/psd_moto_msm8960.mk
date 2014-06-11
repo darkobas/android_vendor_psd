@@ -13,7 +13,7 @@ $(call inherit-product, device/motorola/moto_msm8960/full_moto_msm8960.mk)
 
 # Override AOSP build properties
 PRODUCT_DEVICE := moto_msm8960
-PRODUCT_NAME := pa_moto_msm8960
+PRODUCT_NAME := psd_moto_msm8960
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := xt926
 PRODUCT_MANUFACTURER := motorola

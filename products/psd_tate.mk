@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_tate.mk)
 $(call inherit-product, device/amazon/tate/full_tate.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_tate
+PRODUCT_NAME := psd_tate
 PRODUCT_DEVICE := tate
 PRODUCT_RELEASE_NAME := KindleFireHD
 PRODUCT_BRAND := google

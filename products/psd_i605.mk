@@ -13,7 +13,7 @@ $(call inherit-product, device/samsung/i605/full_i605.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := i605
-PRODUCT_NAME := pa_i605
+PRODUCT_NAME := psd_i605
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SCH-I605
 PRODUCT_MANUFACTURER := samsung

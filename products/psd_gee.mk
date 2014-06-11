@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_gee.mk)
 $(call inherit-product, device/lge/gee/full_gee.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_gee
+PRODUCT_NAME := psd_gee
 PRODUCT_DEVICE := gee
 PRODUCT_BRAND := LGE
 PRODUCT_MANUFACTURER := LGE

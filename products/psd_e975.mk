@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_e975.mk)
 $(call inherit-product, device/lge/e975/e975.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_e975
+PRODUCT_NAME := psd_e975
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-E975
 PRODUCT_MANUFACTURER := LGE

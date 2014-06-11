@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_galaxysmtd.mk)
 $(call inherit-product, device/samsung/galaxysmtd/full_galaxysmtd.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_galaxysmtd
+PRODUCT_NAME := psd_galaxysmtd
 PRODUCT_DEVICE := galaxysmtd
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
