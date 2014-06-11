@@ -27,8 +27,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sm.arm=$(SM_ARM_VERSION)
 endif
 
-# Include Paranoid SaberDroid common configuration
-include vendor/psd/main.mk
+# Disable strict aliasing modules
+DISABLE_STRICT_MODULES := \
+        libbusybox \
+        recovery_e2fsck \
+        libfuse
+
+# Add other categories to common list to pass onto build repo
+DISABLE_STRICT_MODULES += \
+		$(DISABLE_STRICT_MODULES)
 
 # Set -fstrict-aliasing flag to global
 MAKE_STRICT_GLOBAL := true
@@ -38,6 +45,9 @@ OPT_MEMORY := true
 ENABLE_GRAPHITE := true
 # Saber linux toolchains
 USING_SABER_LINUX := yes
+
+# Include Paranoid SaberDroid common configuration
+include vendor/psd/main.mk
 
 # Call pa device
 $(call inherit-product, vendor/pa/products/pa_i9500.mk)
