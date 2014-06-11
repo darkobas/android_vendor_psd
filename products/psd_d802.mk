@@ -33,6 +33,13 @@ include vendor/psd/main.mk
 # Set -fstrict-aliasing flag to global for hammerhead
 MAKE_STRICT_GLOBAL := true
 
+DISABLE_GRAPHITE_MODULES += \
+        libavcodec
+DISABLE_STRICT_MODULES += \
+        libbusybox \
+        recovery_e2fsck \
+        libfuse
+
 # Optimize memory
 OPT_MEMORY := true
 
