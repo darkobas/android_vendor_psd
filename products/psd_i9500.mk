@@ -31,7 +31,8 @@ endif
 DISABLE_STRICT_MODULES := \
         libbusybox \
         recovery_e2fsck \
-        libfuse
+        libfuse \
+        libext2_blkid
 
 # Add other categories to common list to pass onto build repo
 DISABLE_STRICT_MODULES += \
