@@ -12,7 +12,7 @@ $(call inherit-product, vendor/pa/products/pa_find7a.mk)
 $(call inherit-product, device/oppo/find7a/full_find7a.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := psd_find7a
+PRODUCT_NAME := pa_find7a
 PRODUCT_DEVICE := find7a
 PRODUCT_BRAND := Oppo
 PRODUCT_MODEL := Find7a
