@@ -1,6 +1,6 @@
 ifeq (psd_moto_msm8960,$(TARGET_PRODUCT))
 
-# Use 4.10.x for the kernel
+# Use 4.9.x for the kernel
 GCC_VERSION_ARM := 4.9
 # Override ARM settings
 SM_ARM_PATH := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-eabi-$(GCC_VERSION_ARM)
@@ -27,9 +27,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sm.arm=$(SM_ARM_VERSION)
 endif
 
-include vendor/psd/configs/psd_modular.mk
-
-
 DISABLE_GRAPHITE_MODULES += \
         libavcodec
 DISABLE_STRICT_MODULES += \
@@ -37,6 +34,9 @@ DISABLE_STRICT_MODULES += \
 	libbusybox \
         recovery_e2fsck \
         libqsap_sdk
+
+# Include Paranoid SaberDroid common configuration
+include vendor/psd/main.mk
 
 # Optimize memory
 OPT_MEMORY := true
