@@ -31,8 +31,6 @@ DISABLE_GRAPHITE_MODULES += \
         libavcodec
 DISABLE_STRICT_MODULES += \
         libcurl \
-	libbusybox \
-        recovery_e2fsck \
         libqsap_sdk
 
 # Include Paranoid SaberDroid common configuration

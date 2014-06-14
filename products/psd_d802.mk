@@ -30,8 +30,6 @@ endif
 DISABLE_GRAPHITE_MODULES += \
         libavcodec
 DISABLE_STRICT_MODULES += \
-        libbusybox \
-        recovery_e2fsck \
         libfuse
 
 # Include Paranoid SaberDroid common configuration

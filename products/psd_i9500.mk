@@ -29,8 +29,6 @@ endif
 
 # Disable strict aliasing modules
 DISABLE_STRICT_MODULES += \
-        libbusybox \
-        recovery_e2fsck \
         libfuse \
         libandroid_runtime
 

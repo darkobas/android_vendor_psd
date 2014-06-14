@@ -81,7 +81,9 @@ DISABLE_STRICT_MODULES := \
 	libdownmix \
 	libvisualizer \
 	libuclibcrpc \
-	libcrypto_static
+	libcrypto_static \
+        libbusybox \
+        recovery_e2fsck \
 
 # CLANG
 DISABLE_STRICT_CLANG := \
