@@ -45,7 +45,8 @@ DISABLE_GRAPHITE_MODULES := \
 	libstagefright_mp3dec \
 	libjni_filtershow_filters \
 	libwebrtc_spl \
-	mdnsd
+	mdnsd \
+        libavcodec
 # end graphite support
 
 # begin strict-aliasing

@@ -27,8 +27,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sm.arm=$(SM_ARM_VERSION)
 endif
 
-DISABLE_GRAPHITE_MODULES += \
-        libavcodec
 DISABLE_STRICT_MODULES += \
         libfuse
 
