@@ -15,7 +15,7 @@ usage()
     echo -e "    -s  Sync before build"
     echo -e ""
     echo -e ${txtbld}"  Example:"${txtrst}
-    echo -e "    ./rom-build.sh -c1 hammerhead"
+    echo -e "    ./rom-build.sh -c1/2 -d -s -j# hammerhead"
     echo -e ""
     exit 1
 }
@@ -112,7 +112,7 @@ echo -e ${bldblu}"Setting up environment"${txtrst}
 # brunch device
 echo -e ""
 echo -e ${bldblu}"Lunching device"${txtrst}
-brunch "psd_$device-userdebug" -j"$opt_jobs";
+lunch "psd_$device-userdebug";
 
 echo -e ""
 echo -e ${bldblu}"Starting compilation"${txtrst}
@@ -122,7 +122,7 @@ if [ "$opt_dex" -ne 0 ]; then
     export WITH_DEXPREOPT=true
 fi
 
-#make -j"$opt_jobs" bacon
+make -j"$opt_jobs" bacon
 
 #echo -e ""
 
