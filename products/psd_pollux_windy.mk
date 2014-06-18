@@ -36,6 +36,11 @@ ENABLE_GRAPHITE := true
 # Saber linux toolchains
 USING_SABER_LINUX := yes
 
+# Specific module list
+DISABLE_STRICT_MODULES += \
+	static_busybox \
+	audio.primary.msm8960
+
 # Include Paranoid SaberDroid common configuration
 include vendor/psd/main.mk
 
