@@ -54,8 +54,8 @@ endif
 ifeq (psd_falcon,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_falcon.mk
 endif
-ifeq (psd_find7a,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_find7a.mk
+ifeq (psd_find7,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_find7.mk
 endif
 ifeq (psd_galaxysmtd,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_galaxysmtd.mk
