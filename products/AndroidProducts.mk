@@ -186,6 +186,9 @@ endif
 ifeq (psd_pollux_windy,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_pollux_windy.mk
 endif
+ifeq (psd_pollux,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_pollux.mk
+endif
 ifeq (psd_serano3gxx,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/psd_serrano3gxx.mk
 endif
