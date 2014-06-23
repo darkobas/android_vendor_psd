@@ -34,7 +34,7 @@ include vendor/psd/main.mk
 OPT_MEMORY := true
 
 # Enable graphite
-ENABLE_GRAPHITE := true
+ENABLE_GRAPHITE := false
 
 # Saber linux toolchains
 USING_SABER_LINUX := yes
