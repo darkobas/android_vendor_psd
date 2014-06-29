@@ -1,5 +1,7 @@
 ifeq (psd_honami,$(TARGET_PRODUCT))
 
+# Use 4.9.x for the kernel
+GCC_VERSION_ARM := 4.9
 # Override ARM settings
 SM_ARM_PATH := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-eabi-$(GCC_VERSION_ARM)
 SM_ARM := $(shell $(SM_ARM_PATH)/bin/arm-eabi-gcc --version)
@@ -35,7 +37,7 @@ ENABLE_GRAPHITE := true
 USING_SABER_LINUX := yes
 # Specific module list
 DISABLE_STRICT_MODULES += \
-	static_busybox \
+	static_busybox
 
 # Include Paranoid SaberDroid common configuration
 include vendor/psd/main.mk
