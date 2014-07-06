@@ -31,6 +31,8 @@ endif
 MAKE_STRICT_GLOBAL := true
 # Optimize memory
 OPT_MEMORY := true
+# Enable O3 flag
+OPT_A_LOT := true
 # Enable graphite
 ENABLE_GRAPHITE := true
 # Saber linux toolchains
