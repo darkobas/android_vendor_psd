@@ -28,8 +28,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 DISABLE_STRICT_MODULES += \
+	copybit.msm8960 \
+	copybit_c2d \
+	libmemalloc \
+	hwcomposer.msm8960 \
 	mm-vdec-omx-test \
 	audio.primary.msm8960
+
+DISABLE_STRICT_MODULES := \
+		$(DISABLE_STRICT_MODULES)
 
 # Include Paranoid SaberDroid common configuration
 include vendor/psd/main.mk
