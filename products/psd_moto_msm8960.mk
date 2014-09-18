@@ -67,9 +67,4 @@ PRODUCT_BRAND := motorola
 PRODUCT_MODEL := MOTOROLA MSM8960
 PRODUCT_MANUFACTURER := motorola
 
-# Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=motorola \
-    TARGET_DEVICE=moto_msm8960
-
 endif

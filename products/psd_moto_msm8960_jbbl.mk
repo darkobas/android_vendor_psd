@@ -1,4 +1,4 @@
-ifeq (psd_moto_msm8960dt,$(TARGET_PRODUCT))
+ifeq (psd_moto_msm8960_jbbl,$(TARGET_PRODUCT))
 
 # Use 4.9.x for the kernel
 GCC_VERSION_ARM := 4.9
@@ -40,21 +40,16 @@ ENABLE_GRAPHITE := true
 USING_SABER_LINUX := yes
 
 # Call pa device
-$(call inherit-product, vendor/pa/products/pa_msm8960dt.mk)
+$(call inherit-product, vendor/pa/products/pa_moto_msm8960_jbbl.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/motorola/moto_msm8960dt/full_moto_msm8960dt.mk)
+$(call inherit-product, device/motorola/moto_msm8960_jbbl/full_moto_msm8960.mk)
 
 # Override AOSP build properties
-PRODUCT_DEVICE := moto_msm8960dt
-PRODUCT_NAME := psd_moto_msm8960dt
+PRODUCT_DEVICE := moto_msm8960_jbbl
+PRODUCT_NAME := psd_moto_msm8960_jbbl
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := MOTOROLA MSM8960DT
+PRODUCT_MODEL := MOTOROLA MSM8960
 PRODUCT_MANUFACTURER := motorola
-
-# Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=motorola \
-    TARGET_DEVICE=moto_msm8960dt
 
 endif
