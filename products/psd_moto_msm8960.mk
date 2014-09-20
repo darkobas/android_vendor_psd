@@ -1,5 +1,4 @@
 ifeq (psd_moto_msm8960,$(TARGET_PRODUCT))
-include vendor/psd/configs/psd_modular.mk
 
 # Use 4.9.x for the kernel
 GCC_VERSION_ARM := 4.9
@@ -21,23 +20,7 @@ SM_ARM_VERSION := $(SM_ARM_NAME)-$(SM_ARM_DATE)-$(SM_ARM_STATUS)
 endif
 endif
 
-
-ifneq ($(SM_ARM_VERSION),)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sm.arm=$(SM_ARM_VERSION)
-endif
-
-# Optimize memory
-OPT_MEMORY := true
-
-# Enable graphite
-ENABLE_GRAPHITE := true
-
-# Saber linux toolchains
-USING_SABER_LINUX := yes
-
-# Set -fstrict-aliasing flag to global
-MAKE_STRICT_GLOBAL := true
+include vendor/psd/configs/psd_modular.mk
 
 # Include Paranoid SaberDroid common configuration
 include vendor/psd/main.mk
@@ -51,8 +34,15 @@ DISABLE_STRICT_MODULES += \
 		libqcomvisualizer \
 		audio.primary.msm8960 \
 		audio_policy.msm8960 
-		
 
+# Set -fstrict-aliasing flag to global
+MAKE_STRICT_GLOBAL := true
+
+# Enable memory optimization
+OPT_MEMORY := true
+
+#Enable Graphite OPT
+ENABLE_GRAPHITE := false
 
 # Call pa device
 $(call inherit-product, vendor/pa/products/pa_moto_msm8960.mk)
@@ -68,3 +58,4 @@ PRODUCT_MODEL := MOTOROLA MSM8960
 PRODUCT_MANUFACTURER := motorola
 
 endif
+
