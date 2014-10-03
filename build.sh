@@ -43,6 +43,9 @@
 
 DEVICE="$1"
 timestamp="$(date +%s)"
+
+#Use Prebuilt Chromium
+export USE_PREBUILT_CHROMIUM=1
  
 # start
    echo -e "Building Paranoid SaberDroid for $DEVICE";
