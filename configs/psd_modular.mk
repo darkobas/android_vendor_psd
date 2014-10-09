@@ -71,8 +71,10 @@ DISABLE_STRICT_MODULES := \
 	libslang \
 	llvm-rs-cc \
 	ping \
+	libandroid_runtime \
 	libaudioflinger \
 	libmediaplayerservice \
+	libandroidfw \
 	libstagefright \
 	libsurfaceflinger \
 	libfdlibm \
