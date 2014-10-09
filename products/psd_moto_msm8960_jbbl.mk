@@ -1,7 +1,5 @@
-ifeq (psd_moto_msm8960_jbbl,$(TARGET_PRODUCT))
-
-# Use 4.9.x for the kernel
-GCC_VERSION_ARM := 4.9
+# Use 4.x for the kernel
+GCC_VERSION_ARM := 4.8
 # Override ARM settings
 SM_ARM_PATH := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-eabi-$(GCC_VERSION_ARM)
 SM_ARM := $(shell $(SM_ARM_PATH)/bin/arm-eabi-gcc --version)
@@ -22,27 +20,38 @@ endif
 
 include vendor/psd/configs/psd_modular.mk
 
+ifneq ($(SM_ARM_VERSION),)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sm.arm=$(SM_ARM_VERSION)
+endif
+
+
+# Disable strict aliasing modules
+DISABLE_STRICT_MODULES += \
+        libOmxVenc \
+        mm-vdec-omx-test \
+	mm-video-driver-test \
+	libqcomvisualizer \
+	audio.primary.msm8960 \
+	audio_policy.msm8960
+
+DISABLE_STRICT_MODULES := \
+		$(DISABLE_STRICT_MODULES) 
+
 # Include Paranoid SaberDroid common configuration
 include vendor/psd/main.mk
 
-# Add other categories to common list to pass onto build repo
-DISABLE_STRICT_MODULES += \
-		$(DISABLE_STRICT_QCOM) \
-		mm-vdec-omx-test \
-		mm-video-driver-test \
-		libOmxVdec \
-		libqcomvisualizer \
-		audio.primary.msm8960 \
-		audio_policy.msm8960 
-
-# Set -fstrict-aliasing flag to global
+# Set -fstrict-aliasing flag to global for hammerhead
 MAKE_STRICT_GLOBAL := true
 
-# Enable memory optimization
+# Optimize memory
 OPT_MEMORY := true
 
-#Enable Graphite OPT
-ENABLE_GRAPHITE := false
+# Enable graphite
+ENABLE_GRAPHITE := true
+
+# Saber linux toolchains
+USING_SABER_LINUX := yes
 
 # Call pa device
 $(call inherit-product, vendor/pa/products/pa_moto_msm8960_jbbl.mk)
