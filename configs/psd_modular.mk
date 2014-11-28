@@ -45,8 +45,7 @@ DISABLE_GRAPHITE_MODULES := \
 	libstagefright_mp3dec \
 	libjni_filtershow_filters \
 	libwebrtc_spl \
-	mdnsd \
-        libavcodec
+	mdnsd
 # end graphite support
 
 # begin strict-aliasing
@@ -71,10 +70,8 @@ DISABLE_STRICT_MODULES := \
 	libslang \
 	llvm-rs-cc \
 	ping \
-	libandroid_runtime \
 	libaudioflinger \
 	libmediaplayerservice \
-	libandroidfw \
 	libstagefright \
 	libsurfaceflinger \
 	libfdlibm \
@@ -84,14 +81,7 @@ DISABLE_STRICT_MODULES := \
 	libdownmix \
 	libvisualizer \
 	libuclibcrpc \
-	libvold \
-	libfuse \
-	libcurl \
-	libqsap_sdk \
-	tcpdump \
-	libcrypto_static \
-        libbusybox \
-        recovery_e2fsck \
+	libcrypto_static
 
 # CLANG
 DISABLE_STRICT_CLANG := \
@@ -114,15 +104,12 @@ DISABLE_STRICT_WEBKIT := \
 	third_party_WebKit_Source_core_webcore_platform_gyp \
 	third_party_WebKit_Source_core_webcore_remaining_gyp \
 	third_party_WebKit_Source_core_webcore_derived_gyp \
-        third_party_WebKit_Source_platform_blink_platform_gyp
+	third_party_WebKit_Source_platform_blink_platform_gyp
+
 # ext fs
 DISABLE_STRICT_EXT := \
 	libext2_blkid \
 	libext2_blkid_host
-
-# qcom
-DISABLE_STRICT_QCOM := \
-	libqcomvisualizer
 
 # Add the other categories last
 DISABLE_STRICT_MODULES += \

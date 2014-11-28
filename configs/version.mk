@@ -4,6 +4,7 @@ ifneq ($(PSD_TYPE),)
 else
         ROM_NAME := $(ROM_VERSION_MAJOR).$(ROM_VERSION_MINOR)
         PSD_VERSION := $(PSD_VERSION_MAJOR).$(PSD_VERSION_MINOR)-$(PSD_VERSION_MAINTENANCE)
+        PA_VERSION := $(ROM_VERSION_MAJOR).$(ROM_VERSION_MINOR)-$(ROM_VERSION_TAG)
 endif
 
 export BUILD_DATE := $(shell date -u +%Y%m%d)
@@ -14,4 +15,5 @@ export PSD_BUILD_NAME := $(ROM_NAME)-$(BUILD_DATE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.$(VENDOR).version=$(PSD_VERSION) \
-    ro.$(VENDOR).modversion=$(PSD_BUILD_NAME)
+    ro.$(VENDOR).modversion=$(PSD_BUILD_NAME) \
+    ro.pa.version=($PA_VERSION)
