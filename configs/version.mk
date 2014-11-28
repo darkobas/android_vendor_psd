@@ -16,4 +16,4 @@ export PSD_BUILD_NAME := $(ROM_NAME)-$(BUILD_DATE)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.$(VENDOR).version=$(PSD_VERSION) \
     ro.$(VENDOR).modversion=$(PSD_BUILD_NAME) \
-    ro.pa.version=($PA_VERSION)
+    ro.pa.version=$(PA_VERSION)
