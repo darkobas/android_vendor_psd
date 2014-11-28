@@ -43,12 +43,11 @@ PRODUCT_COPY_FILES += \
 #    vendor/$(VENDOR)/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
 #    vendor/$(VENDOR)/prebuilt/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
 
-# SU Support
-# SUPERUSER_EMBEDDED := true
 
-# PRODUCT_PACKAGES := \
-#    Superuser \
-#    su
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/screwd/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/screwd/prebuilt/etc/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon  
 
 # PRODUCT_PROPERTY_OVERRIDES += \
 #    persist.sys.root_access=3
