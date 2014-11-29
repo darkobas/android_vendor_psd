@@ -5,9 +5,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     BUILD_UTC_DATE=$(shell date +"%s")
 
-# Enable ADB authentication
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    ro.adb.secure=1
+# Extra properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.psd.device=$(DEVICE)
 
 # Required CM packages
 PRODUCT_PACKAGES += \
@@ -25,11 +25,6 @@ PRODUCT_PACKAGES += \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf 
-
-# CM Hardware Abstraction Framework
-PRODUCT_PACKAGES += \
-    org.cyanogenmod.hardware \
-    org.cyanogenmod.hardware.xml
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
@@ -67,13 +62,3 @@ PRODUCT_PACKAGES += \
     ssh-keygen \
     start-ssh
 
-# rsync
-PRODUCT_PACKAGES += \
-    rsync
-
-# Stagefright FFMPEG plugin
-PRODUCT_PACKAGES += \
-    libstagefright_soft_ffmpegadec \
-    libstagefright_soft_ffmpegvdec \
-    libFFmpegExtractor \
-    libnamparser

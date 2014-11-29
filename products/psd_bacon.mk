@@ -34,9 +34,6 @@ DISABLE_STRICT_MODULES += \
 DISABLE_STRICT_MODULES := \
 		$(DISABLE_STRICT_MODULES)
 
-# Include Paranoid SaberDroid common configuration
-include vendor/psd/main.mk
-
 # Set -fstrict-aliasing flag to global for hammerhead
 MAKE_STRICT_GLOBAL := true
 
@@ -49,8 +46,17 @@ ENABLE_GRAPHITE := true
 # Saber linux toolchains
 USING_SABER_LINUX := yes
 
-# Call pa device
-$(call inherit-product, vendor/pa/products/pa_bacon.mk)
+# OVERLAY_TARGET adds overlay asset source
+OVERLAY_TARGET := pa_xxhdpi
+
+# Build paprefs from sources
+PREFS_FROM_SOURCE ?= false
+
+# Inherit telephony common stuff
+$(call inherit-product, vendor/psd/configs/telephony.mk)
+
+# Include AOSPA common configuration
+include vendor/psd/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/oneplus/bacon/full_bacon.mk)
@@ -64,5 +70,7 @@ PRODUCT_MANUFACTURER := Oneplus
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=bacon TARGET_DEVICE=bacon
+
+PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 endif

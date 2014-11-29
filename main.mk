@@ -12,8 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/psd/configs/psd_board.mk
 include vendor/psd/vendor.mk
+include vendor/psd/configs/aosp_fixes.mk
+include vendor/psd/configs/system.mk
+include vendor/psd/configs/psd_board.mk
 include vendor/psd/configs/psd_overrides.mk
+#include vendor/psd/configs/bootanimation.mk
 include vendor/psd/configs/version.mk
+include vendor/psd/configs/legacy_extras.mk
+include vendor/psd/configs/themes_common.mk
+#include vendor/psd/sepolicy/sepolicy.mk
 
