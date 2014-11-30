@@ -107,9 +107,9 @@ DISABLE_STRICT_WEBKIT := \
 	third_party_WebKit_Source_platform_blink_platform_gyp
 
 # ext fs
-DISABLE_STRICT_EXT := \
-	libext2_blkid \
-	libext2_blkid_host
+#DISABLE_STRICT_EXT := \
+#	libext2_blkid \
+#	libext2_blkid_host
 
 # Add the other categories last
 DISABLE_STRICT_MODULES += \
