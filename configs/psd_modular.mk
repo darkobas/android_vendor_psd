@@ -118,6 +118,7 @@ DISABLE_STRICT_CLANG := \
 	libclangAnalysis \
 	libclangEdit \
 	libclangAST \
+	libnativehelper \
 	libc++ 
 # WebKit
 DISABLE_STRICT_WEBKIT := \
