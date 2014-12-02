@@ -71,6 +71,6 @@ PRODUCT_MANUFACTURER := Oneplus
 # Set build fingerprint / ID / Product Name ect.
 #PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=bacon TARGET_DEVICE=bacon
 
-#PRODUCT_GMS_CLIENTID_BASE := android-oneplus
+PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 endif

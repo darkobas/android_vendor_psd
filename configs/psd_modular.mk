@@ -45,7 +45,25 @@ DISABLE_GRAPHITE_MODULES := \
 	libstagefright_mp3dec \
 	libjni_filtershow_filters \
 	libwebrtc_spl \
+	libz \
+	liblog \
+	libutils \
+	libcutils \
+	libziparchive-host \
+	libzopfli \
+	libc++ \
+	libc++abi \
+        libunwindbacktrace \
+	libunwind \
+	libcompiler_rt \
+	libunz \
+	libzipfile \
+	libgtest_host \
+	libunwind-ptrace \
+	libgtest_main_host \
 	mdnsd
+
+GRAPHITE_FLAGS := -fgraphite -floop-flatten -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block
 # end graphite support
 
 # begin strict-aliasing
@@ -81,6 +99,7 @@ DISABLE_STRICT_MODULES := \
 	libdownmix \
 	libvisualizer \
 	libuclibcrpc \
+	libziparchive-host \
 	libcrypto_static
 
 # CLANG
@@ -98,7 +117,8 @@ DISABLE_STRICT_CLANG := \
 	libclangStaticAnalyzerCore \
 	libclangAnalysis \
 	libclangEdit \
-	libclangAST
+	libclangAST \
+	libc++ 
 # WebKit
 DISABLE_STRICT_WEBKIT := \
 	third_party_WebKit_Source_core_webcore_platform_gyp \
