@@ -44,7 +44,7 @@ OPT_MEMORY := true
 ENABLE_GRAPHITE := true
 
 # Saber linux toolchains
-USING_SABER_LINUX := yes
+#USING_SABER_LINUX := yes
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xxhdpi

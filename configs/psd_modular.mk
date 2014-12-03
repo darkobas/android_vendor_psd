@@ -39,6 +39,9 @@ THREAD_FLAGS := -pthread
 # The last "error" in the build will tell you which module has an issue by having a name *****_intermidates.
 # Here will be the module name excluding "_intermidates".
 DISABLE_GRAPHITE_MODULES := \
+	libfdlibm \
+	libssl-host \
+	libz-host \
 	libstagefright_amrwbenc \
 	libFFTEm \
 	libwebviewchromium \
@@ -61,6 +64,19 @@ DISABLE_GRAPHITE_MODULES := \
 	libgtest_host \
 	libunwind-ptrace \
 	libgtest_main_host \
+	dalvikvm \
+	libnativehelper \
+	libbacktrace_libc++ \
+	libart \
+	libnativebridge \
+	libsigchain \
+	libart-compiler \
+	libvixl \
+	libcrypto-host \
+	libexpat-host \
+	libicui18n-host \
+	libicuuc-host \
+	libjavacore \
 	mdnsd
 
 GRAPHITE_FLAGS := -fgraphite -floop-flatten -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block
@@ -78,6 +94,7 @@ GRAPHITE_FLAGS := -fgraphite -floop-flatten -floop-parallelize-all -ftree-loop-l
 DISABLE_STRICT_MODULES := \
 	base_base_gyp \
 	busybox \
+	dalvikvm \
 	e2fsck \
 	e2fsck_host \
 	libcrypto-host \
@@ -100,6 +117,12 @@ DISABLE_STRICT_MODULES := \
 	libvisualizer \
 	libuclibcrpc \
 	libziparchive-host \
+	libart \
+	libnativebridge \
+	libsigchain \
+	libart-compiler \
+	libcrypto-host \
+	libjavacore \
 	libcrypto_static
 
 # CLANG
