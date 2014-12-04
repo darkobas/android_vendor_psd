@@ -53,6 +53,7 @@ else
 fi
 
 DEVICE="$1"
+export DEVICE=$DEVICE
 timestamp="$(date +%s)"
 
 #Use Prebuilt Chromium
