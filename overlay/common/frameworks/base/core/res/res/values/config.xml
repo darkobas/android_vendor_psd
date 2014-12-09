@@ -38,4 +38,7 @@
     <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>
+
+    <!-- Configuartion to set zen mode when silent mode is on -->
+    <bool name="config_setZenModeWhenSilentModeOn">true</bool>
 </resources>
