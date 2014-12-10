@@ -54,8 +54,6 @@ DISABLE_GRAPHITE_MODULES := \
 	libcutils \
 	libziparchive-host \
 	libzopfli \
-	libc++ \
-	libc++abi \
         libunwindbacktrace \
 	libunwind \
 	libcompiler_rt \
@@ -141,8 +139,7 @@ DISABLE_STRICT_CLANG := \
 	libclangAnalysis \
 	libclangEdit \
 	libclangAST \
-	libnativehelper \
-	libc++ 
+	libnativehelper
 # WebKit
 DISABLE_STRICT_WEBKIT := \
 	third_party_WebKit_Source_core_webcore_platform_gyp \
