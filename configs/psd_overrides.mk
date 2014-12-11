@@ -22,9 +22,7 @@ PRODUCT_PACKAGES += \
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    DSPManager \
-    libcyanogen-dsp \
-    audio_effects.conf 
+    AudioFX
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
