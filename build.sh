@@ -53,12 +53,14 @@ else
 fi
 
 DEVICE="$1"
-export DEVICE=$DEVICE
 timestamp="$(date +%s)"
 
 #Use Prebuilt Chromium
 export USE_PREBUILT_CHROMIUM=1
  
+#Generate Changelog
+export CHANGELOG=true
+
 # start
    echo -e "Building Paranoid SaberDroid for $DEVICE";
    echo -e "$PA_TAG $PA_MAJOR.$PA_MINOR";
@@ -142,6 +144,8 @@ lunch psd_$DEVICE-userdebug
 #         4) -j32"
 #      read n
 #         case $n in
+echo $DEVICE
+echo $timestamp.txt
 mka bacon 2>&1 | tee build-logs/psd_$DEVICE-$timestamp.txt
 #            1) make -j4 bacon 2>&1 | tee build-logs/psd_$DEVICE-$timestamp.txt
 #               ;;
