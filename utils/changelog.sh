@@ -30,5 +30,4 @@ done
 
 sed -i 's/project/   */g' $Changelog
 
-cp $Changelog $OUT/
-rm $Changelog
+cp $Changelog $TOP/

@@ -28,6 +28,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/$(VENDOR)/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 
+# changelog copy
+PRODUCT_COPY_FILES += \
+    Changelog.txt:system/etc/CHANGELOG.txt
+
 # Gapps backup script
 # PRODUCT_COPY_FILES += \
 #    vendor/$(VENDOR)/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \

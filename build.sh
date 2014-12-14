@@ -116,7 +116,9 @@ export CHANGELOG=true
    echo -e "Setting up build environment..."
    . build/envsetup.sh
    clear
-
+echo -e "generating changelog....."
+./vendor/psd/utils/changelog.sh
+echo -e "$PRODUCT_OUT/CHANGELOG.txt created"
 # decide to build odex or deodex
 #   echo -e "";
 #   echo -e "";
@@ -146,6 +148,7 @@ lunch psd_$DEVICE-userdebug
 #         case $n in
 echo $DEVICE
 echo $timestamp.txt
+rm $OUT/system/build.prop
 mka bacon 2>&1 | tee build-logs/psd_$DEVICE-$timestamp.txt
 #            1) make -j4 bacon 2>&1 | tee build-logs/psd_$DEVICE-$timestamp.txt
 #               ;;
