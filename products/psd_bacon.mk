@@ -61,6 +61,10 @@ include vendor/psd/main.mk
 # Inherit device configuration
 $(call inherit-product, device/oneplus/bacon/full_bacon.mk)
 
+# next camera
+PRODUCT_PACKAGES += \
+    CameraNext
+
 # Override AOSP build properties
 PRODUCT_NAME := psd_bacon
 PRODUCT_DEVICE := bacon
