@@ -56,7 +56,7 @@ DEVICE="$1"
 timestamp="$(date +%s)"
 
 #Use Prebuilt Chromium
-export USE_PREBUILT_CHROMIUM=1
+#export USE_PREBUILT_CHROMIUM=1
  
 #Generate Changelog
 export CHANGELOG=true
@@ -116,52 +116,29 @@ export CHANGELOG=true
    echo -e "Setting up build environment..."
    . build/envsetup.sh
    clear
+
+echo "create new changelog ?
+	1) yes 
+	2) no"
+read n
+case $n in
+1)
 echo -e "generating changelog....."
 ./vendor/psd/utils/changelog.sh
 echo -e "$PRODUCT_OUT/CHANGELOG.txt created"
-# decide to build odex or deodex
-#   echo -e "";
-#   echo -e "";
-#   echo "Build odex or deodex:
-#         1) odex
-#         2) deodex"
-#      read n
-#         case $n in
-#            1) lunch psd_$DEVICE-user
-#               ;;
-#            2) lunch psd_$DEVICE-userdebug
+;;
+2)
+echo "skippin changelog"
+;;
+*) invalid option;;
+esac
+
 lunch psd_$DEVICE-userdebug
-#               ;;
-#            *) invalid option
-#               ;;
-#         esac
-#         clear
-# 
-# execute the build while sending a log to 'build-logs'
    echo -e "Starting build...";
-#   echo "Please select how many threads you would like to use to build:
-#         1) -j4
-#         2) -j8
-#         3) -j18
-#         4) -j32"
-#      read n
-#         case $n in
 echo $DEVICE
 echo $timestamp.txt
 rm $OUT/system/build.prop
 mka bacon 2>&1 | tee build-logs/psd_$DEVICE-$timestamp.txt
-#            1) make -j4 bacon 2>&1 | tee build-logs/psd_$DEVICE-$timestamp.txt
-#               ;;
-#            2) make -j8 bacon 2>&1 | tee build-logs/psd_$DEVICE-$timestamp.txt
-#               ;;
-#            3) make -j18 bacon 2>&1 | tee build-logs/psd_$DEVICE-$timestamp.txt
-#               ;;
-#            4) make -j32 bacon 2>&1 | tee build-logs/psd_$DEVICE-$timestamp.txt
-#               ;;
-#            *) invalid option
-#               ;;
-#         esac
-# 
 # we're done
    echo -e "Finished building Paranoid SaberDroid.";
    echo -e "If for some reason your build failed,";
