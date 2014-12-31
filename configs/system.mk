@@ -46,8 +46,8 @@ PRODUCT_COPY_FILES += \
 
 # SuperSU
 PRODUCT_COPY_FILES += \
-    vendor/screwd/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-    vendor/screwd/prebuilt/etc/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon  
+    vendor/psd/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/psd/prebuilt/etc/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon  
 
 # PRODUCT_PROPERTY_OVERRIDES += \
 #    persist.sys.root_access=3
