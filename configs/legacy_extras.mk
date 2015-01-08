@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    ScreenRecorder \
     LockClock 
 
 # Extra tools
