@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BluetoothExt \
     ScreenRecorder \
+    libscreenrecorder \
     LockClock 
 
 # Extra tools
