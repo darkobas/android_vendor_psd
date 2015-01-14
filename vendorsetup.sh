@@ -2,3 +2,5 @@ add_lunch_combo psd_bacon-userdebug
 add_lunch_combo psd_d802-userdebug
 add_lunch_combo psd_d855-userdebug
 add_lunch_combo psd_shamu-userdebug
+add_lunch_combo psd_flo-userdebug
+add_lunch_combo psd_p5100-userdebug
