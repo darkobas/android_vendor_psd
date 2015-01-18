@@ -21,5 +21,3 @@ include vendor/psd/configs/bootanimation.mk
 include vendor/psd/configs/version.mk
 include vendor/psd/configs/legacy_extras.mk
 include vendor/psd/configs/themes_common.mk
-#include vendor/psd/sepolicy/sepolicy.mk
-
