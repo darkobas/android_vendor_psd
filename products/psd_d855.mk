@@ -1,7 +1,7 @@
 ifeq (psd_d855,$(TARGET_PRODUCT))
 
 # Use 4.x for the kernel
-GCC_VERSION_ARM := 4.9
+GCC_VERSION_ARM := 4.8
 # Override ARM settings
 SM_ARM_PATH := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-eabi-$(GCC_VERSION_ARM)
 SM_ARM := $(shell $(SM_ARM_PATH)/bin/arm-eabi-gcc --version)
@@ -45,12 +45,6 @@ ENABLE_GRAPHITE := true
 
 # Saber linux toolchains
 #USING_SABER_LINUX := yes
-
-# OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_g3
-
-# Build paprefs from sources
-PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
 $(call inherit-product, vendor/psd/configs/telephony.mk)
