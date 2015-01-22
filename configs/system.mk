@@ -54,3 +54,8 @@ PRODUCT_COPY_FILES += \
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
     vendor/psd/prebuilt/common/otasigcheck.sh:system/bin/otasigcheck.sh
+
+# Layers Theme
+PRODUCT_COPY_FILES += \
+    vendor/psd/prebuilt/permissions/com.layers.theme.xml:system/etc/permissions/com.layers.theme.xml \
+    vendor/psd/prebuilt/common/etc/Layers.apk:system/app/Layers/Layers.apk
