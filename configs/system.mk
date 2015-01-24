@@ -38,10 +38,10 @@ PRODUCT_COPY_FILES += \
 	vendor/psd/prebuilt/etc/hosts.og:system/etc/hosts.og
 
 # Gapps backup script
-# PRODUCT_COPY_FILES += \
-#    vendor/$(VENDOR)/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-#    vendor/$(VENDOR)/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-#    vendor/$(VENDOR)/prebuilt/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
+PRODUCT_COPY_FILES += \
+    vendor/$(VENDOR)/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/$(VENDOR)/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/$(VENDOR)/prebuilt/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
 
 
 # SuperSU
@@ -51,3 +51,6 @@ PRODUCT_COPY_FILES += \
 
 # PRODUCT_PROPERTY_OVERRIDES += \
 #    persist.sys.root_access=3
+# Signature compatibility validation
+PRODUCT_COPY_FILES += \
+    vendor/psd/prebuilt/common/otasigcheck.sh:system/bin/otasigcheck.sh
