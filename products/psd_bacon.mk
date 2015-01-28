@@ -46,12 +46,6 @@ ENABLE_GRAPHITE := true
 # Saber linux toolchains
 #USING_SABER_LINUX := yes
 
-# OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xxhdpi
-
-# Build paprefs from sources
-PREFS_FROM_SOURCE ?= false
-
 # Inherit telephony common stuff
 $(call inherit-product, vendor/psd/configs/telephony.mk)
 
