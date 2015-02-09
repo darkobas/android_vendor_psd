@@ -59,3 +59,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/psd/prebuilt/permissions/com.layers.theme.xml:system/etc/permissions/com.layers.theme.xml \
     vendor/psd/prebuilt/common/etc/Layers.apk:system/app/Layers/Layers.apk
+
+#Include google messenger
+PRODUCT_COPY_FILES += \
+    vendor/psd/prebuilt/common/etc/PrebuiltBugle.apk:system/app/PrebuiltBugle/PrebuiltBugle.apk
