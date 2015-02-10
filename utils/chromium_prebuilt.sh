@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # Copyright (C) 2014 The OmniROM Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,23 +29,23 @@ fi
 
 TARGET_DIR=$OUT
 PREBUILT_DIR=$TOP/prebuilts/chromium/$DEVICE
-ARCH_PREBUILT_CHROMIUM=$(get_build_var TARGET_ARCH)
 
 if [ -d $PREBUILT_DIR ]; then
     rm -rf $PREBUILT_DIR
 fi
 
 mkdir -p $PREBUILT_DIR
+mkdir -p $PREBUILT_DIR/framework
 mkdir -p $PREBUILT_DIR/app
 mkdir -p $PREBUILT_DIR/lib
 
 if [ -d $TARGET_DIR ]; then
     echo "Copying files..."
-    cp -r $TARGET_DIR/system/app/webview $PREBUILT_DIR/app/
-    cp -r $TARGET_DIR/obj/APPS/webviewchromium-paks_intermediates/ $PREBUILT_DIR/framework/
+    cp -r $TARGET_DIR/system/app/webview $PREBUILT_DIR/app
+    cp -r $TARGET_DIR/obj/APPS/webviewchromium-paks_intermediates/* $PREBUILT_DIR/framework/
     cp $TARGET_DIR/system/lib/libwebviewchromium.so $PREBUILT_DIR/lib/libwebviewchromium.so
-    cp $TARGET_DIR/system/lib/libwebviewchromium_loader.so $PREBUILT_DIR/lib/libwebviewchromium_loader.so
     cp $TARGET_DIR/system/lib/libwebviewchromium_plat_support.so $PREBUILT_DIR/lib/libwebviewchromium_plat_support.so
+    cp $TARGET_DIR/system/lib/libwebviewchromium_loader.so $PREBUILT_DIR/lib/libwebviewchromium_loader.so
 else
     echo "Please ensure that you have ran a full build prior to running this script!"
     return 1;
@@ -132,8 +133,8 @@ PRODUCT_COPY_FILES += \\
     \$(LOCAL_PATH)/lib/libwebviewchromium_plat_support.so:system/lib/libwebviewchromium_plat_support.so \\
     \$(LOCAL_PATH)/lib/libwebviewchromium_loader.so:system/lib/libwebviewchromium_loader.so
 
-    \$(shell mkdir -p out/target/product/__DEVICE__/system/app/webview/lib/$ARCH_PREBUILT_CHROMIUM/)
-    \$(shell cp -r \$(LOCAL_PATH)/app/webview/lib/$ARCH_PREBUILT_CHROMIUM/libwebviewchromium.so out/target/product/__DEVICE__/system/app/webview/lib/$ARCH_PREBUILT_CHROMIUM/libwebviewchromium.so)
+    \$(shell mkdir -p out/target/product/__DEVICE__/system/app/webview/lib/arm/)
+    \$(shell cp -r \$(LOCAL_PATH)/app/webview/lib/arm/libwebviewchromium.so out/target/product/__DEVICE__/system/app/webview/lib/arm/libwebviewchromium.so)
 
 EOF
 
