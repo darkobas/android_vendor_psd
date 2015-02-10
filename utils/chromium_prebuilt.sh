@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # Copyright (C) 2014 The OmniROM Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,7 +28,7 @@ fi
 
 TARGET_DIR=$OUT
 PREBUILT_DIR=$TOP/prebuilts/chromium/$DEVICE
-ARCH_PREBUILT_CHROMIUM=$(get_build_var TARGET_ARCH)
+ARCH_PREBUILT_CHROMIUM=arm
 
 if [ -d $PREBUILT_DIR ]; then
     rm -rf $PREBUILT_DIR
@@ -41,7 +40,7 @@ mkdir -p $PREBUILT_DIR/lib
 
 if [ -d $TARGET_DIR ]; then
     echo "Copying files..."
-    cp -r $TARGET_DIR/system/app/webview $PREBUILT_DIR/app/
+    cp -r $TARGET_DIR/system/app/webview $PREBUILT_DIR/app
     cp -r $TARGET_DIR/obj/APPS/webviewchromium-paks_intermediates/ $PREBUILT_DIR/framework/
     cp $TARGET_DIR/system/lib/libwebviewchromium.so $PREBUILT_DIR/lib/libwebviewchromium.so
     cp $TARGET_DIR/system/lib/libwebviewchromium_loader.so $PREBUILT_DIR/lib/libwebviewchromium_loader.so
