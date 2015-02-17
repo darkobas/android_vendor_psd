@@ -57,7 +57,8 @@ $(call inherit-product, device/lge/d855/d855.mk)
 
 # next camera
 PRODUCT_PACKAGES += \
-    Camera2
+    Camera2 \
+    AudioFX
 
 # Override AOSP build properties
 PRODUCT_NAME := psd_d855

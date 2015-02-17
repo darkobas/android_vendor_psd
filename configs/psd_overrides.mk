@@ -21,8 +21,8 @@ PRODUCT_PACKAGES += \
     libemoji
 
 # Custom CM packages
-PRODUCT_PACKAGES += \
-    AudioFX
+#PRODUCT_PACKAGES += \
+#    AudioFX
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \

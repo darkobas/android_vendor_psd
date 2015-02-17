@@ -63,7 +63,8 @@ $(call inherit-product, device/lge/d802/d802.mk)
 
 # next camera
 PRODUCT_PACKAGES += \
-    Camera2
+    Camera2 \
+    AudioFX
 
 # Override AOSP build properties
 PRODUCT_NAME := psd_d802

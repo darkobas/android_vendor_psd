@@ -51,7 +51,9 @@ include vendor/psd/main.mk
 
 # next camera
 PRODUCT_PACKAGES += \
-    Camera2
+    Camera2 \
+    AudioFX
+
 # Check for target product
 
 # OVERLAY_TARGET adds overlay asset source
