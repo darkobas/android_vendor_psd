@@ -17,7 +17,7 @@
 
 
 # PA XXHDPI Devices
-ifneq ($(filter psd_bacon psd_d802 psd_d855 psd_flo psd_p5100,$(TARGET_PRODUCT)),)
+ifneq ($(filter psd_bacon psd_d802 psd_d855 psd_flo psd_p5100 psd_klte,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/psd/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 endif
