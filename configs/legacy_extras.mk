@@ -61,3 +61,7 @@ PRODUCT_PACKAGES += \
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
 endif
+
+#OpenDelta
+PRODUCT_PACKAGES += \
+    OpenDelta
