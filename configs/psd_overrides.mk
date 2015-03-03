@@ -5,10 +5,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     BUILD_UTC_DATE=$(shell date +"%s")
 
-# Extra properties
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    ro.psd.device=$(DEVICE)
-
 # Required CM packages
 PRODUCT_PACKAGES += \
     Development \

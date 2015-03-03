@@ -12,7 +12,6 @@ endif
 export PSD_BUILD_NAME := $(PSD_VERSION)-$(BUILD_DATE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.psd.device=$(DEVICE) \
     ro.psd.version=$(PSD_VERSION) \
     ro.psd.modversion=$(PSD_BUILD_NAME)
 
