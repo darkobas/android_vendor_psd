@@ -46,11 +46,14 @@ else
 fi
 
 DEVICE="$1"
-#Use Prebuilt Chromium
-#export USE_PREBUILT_CHROMIUM=1
+if [[ -z "$DEVICE" ]]; then exit 0
+fi
  
 #Generate Changelog
 export CHANGELOG=true
+
+#Use Prebuilt Chromium
+#export USE_PREBUILT_CHROMIUM=1
 
 # start
    echo -e "Building Paranoid SaberDroid for $DEVICE";
@@ -84,11 +87,34 @@ echo "skippin changelog"
 *) invalid option;;
 esac
 
+echo "generate OpenDelta ?
+	1) yes
+	2) no"
+read n
+case $n in
+1)
+export OPENDELTA=true
+;;
+2)
+echo "skip OpenDelta"
+export OPENDELTA=false
+;;
+*) invalid option;;
+esac
+
 lunch psd_$DEVICE-userdebug
    echo -e "Starting build...";
 rm $OUT/system/build.prop
+rm $OUT/*.zip
+rm $OUT/*.md5sum
 START=$(date +%s)
+
 mka bacon 2>&1 | tee build-logs/psd_$DEVICE-$timestamp.txt
+
+if [ "$OPENDELTA" = true ]; then
+opendelta.sh $DEVICE
+fi
+
 END=$(date +%s)
 DIFF=$(( $END - $START ))
 # we're done
