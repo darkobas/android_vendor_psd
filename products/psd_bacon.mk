@@ -44,6 +44,7 @@ include vendor/psd/main.mk
 $(call inherit-product, device/oneplus/bacon/full_bacon.mk)
 
 # next camera
+CAMERA_NEXT := true
 PRODUCT_PACKAGES += \
     CameraNext
 
