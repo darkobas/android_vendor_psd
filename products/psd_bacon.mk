@@ -1,7 +1,7 @@
 ifeq (psd_bacon,$(TARGET_PRODUCT))
 
 # Use 4.x for the kernel
-GCC_VERSION_ARM := 4.9
+GCC_VERSION_ARM := 4.8
 # Override ARM settings
 SM_ARM_PATH := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-eabi-$(GCC_VERSION_ARM)
 SM_ARM := $(shell $(SM_ARM_PATH)/bin/arm-eabi-gcc --version)
@@ -26,11 +26,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 # Set -fstrict-aliasing flag to global for hammerhead
-MAKE_STRICT_GLOBAL := true
-GRAPHITE_OPTS := true
-FLOOP_NEST_OPTIMIZE := true
-STRICT_ALIASING :=true
-KRAIT_TUNINGS := true
+#MAKE_STRICT_GLOBAL := true
+#GRAPHITE_OPTS := true
+#FLOOP_NEST_OPTIMIZE := true
+#STRICT_ALIASING :=true
+#KRAIT_TUNINGS := true
 include vendor/psd/configs/psd_modular.mk
 
 
