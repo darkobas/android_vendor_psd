@@ -46,7 +46,8 @@ $(call inherit-product, device/oneplus/bacon/full_bacon.mk)
 # next camera
 CAMERA_NEXT := true
 PRODUCT_PACKAGES += \
-    CameraNext
+    CameraNext \
+    AudioFX
 
 # Override AOSP build properties
 PRODUCT_NAME := psd_bacon
