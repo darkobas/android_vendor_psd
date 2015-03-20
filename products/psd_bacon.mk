@@ -2,27 +2,31 @@ ifeq (psd_bacon,$(TARGET_PRODUCT))
 
 # Use 4.x for the kernel
 GCC_VERSION_ARM := 4.9
+GCC_VERSION_ARMEABI := 4.9
 # Override ARM settings
-SM_ARM_PATH := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-eabi-$(GCC_VERSION_ARM)
-SM_ARM := $(shell $(SM_ARM_PATH)/bin/arm-eabi-gcc --version)
 
-ifneq ($(filter (UBERTC) (UBERTC%),$(SM_ARM)),)
-# GCC Colors only works on gcc >=4.9.x
-export GCC_COLORS := 'error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-SM_ARM_VERSION := $(filter 4.8 4.8.% 4.9 4.9.% 4.10 4.10.%,$(SM_ARM))
-SM_ARM_NAME := $(filter (UBERTC) (UBERTC%),$(SM_ARM))
-SM_ARM_DATE := $(filter 20150% 20151% 20140% 20141%,$(SM_ARM))
-SM_ARM_STATUS := $(filter (release) (prerelease) (experimental), $(SM_ARM))
-ifeq ($(filter (UBERTC%),$(SM_ARM)),)
-SM_ARM_VERSION := $(SM_ARM_NAME)_$(SM_ARM_VERSION)_$(SM_ARM_DATE)-$(SM_ARM_STATUS)
-else
-SM_ARM_VERSION := $(SM_ARM_NAME)-$(SM_ARM_DATE)-$(SM_ARM_STATUS)
-endif
-endif
+# Path to toolchain
+UBER_AND_PATH := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-linux-androideabi-$(GCC_VERSION_ARMEABI)
+UBER_AND := $(shell $(UBER_AND_PATH)/bin/arm-linux-androideabi-gcc --version)
 
-ifneq ($(SM_ARM_VERSION),)
+# Find strings in version info
+ifneq ($(filter (UBERTC%),$(UBER_AND)),)
+UBER_AND_NAME := $(filter (UBERTC%),$(UBER_AND))
+# UBER_AND_DATE := $(filter 20150% 20151%,$(UBER_AND))
+UBER_AND_VERSION := $(UBER_AND_NAME)-$(UBER_AND_DATE)
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sm.arm=$(SM_ARM_VERSION)
+     ro.uber.android=$(UBER_AND_VERSION)
+endif
+
+UBER_KERNEL_PATH := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-eabi-$(GCC_VERSION_ARM)
+UBER_KERNEL := $(shell $(UBER_KERNEL_PATH)/bin/arm-eabi-gcc --version)
+
+ifneq ($(filter (UBERTC%),$(UBER_KERNEL)),)
+UBER_KERNEL_NAME := $(filter (UBERTC%),$(UBER_KERNEL))
+UBER_KERNEL_DATE := $(filter 20150% 20151%,$(UBER_KERNEL))
+UBER_KERNEL_VERSION := $(UBER_KERNEL_NAME)-$(UBER_KERNEL_DATE)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.uber.kernel=$(UBER_KERNEL_VERSION)
 endif
 
 # Set -fstrict-aliasing flag to global for hammerhead
@@ -31,8 +35,31 @@ GRAPHITE_OPTS := true
 FLOOP_NEST_OPTIMIZE := true
 STRICT_ALIASING :=true
 KRAIT_TUNINGS := true
+USE_O3_OPTIMIZATIONS := true
+
 include vendor/psd/configs/psd_modular.mk
 
+ifeq (true,$(GRAPHITE_OPTS))
+OPT1 := (graphite)
+endif
+ifeq (true,$(STRICT_ALIASING))
+OPT2 := (strict)
+endif
+ifeq (true,$(USE_O3_OPTIMIZATIONS))
+OPT3 := (O3)
+endif
+ifeq (true,$(KRAIT_TUNINGS))
+OPT4 := (krait)
+endif
+ifeq (true,$(ENABLE_GCCONLY))
+OPT5 := (gcconly)
+endif
+
+GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)$(OPT5)
+ifneq (,$(GCC_OPTIMIZATION_LEVELS))
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.uber.flags=$(GCC_OPTIMIZATION_LEVELS)
+endif
 
 # Inherit telephony common stuff
 $(call inherit-product, vendor/psd/configs/telephony.mk)
