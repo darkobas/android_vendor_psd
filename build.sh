@@ -89,15 +89,19 @@ esac
 
 echo "generate OpenDelta ?
 	1) yes
-	2) no"
+	2) no
+	3) dev"
 read n
 case $n in
 1)
-export OPENDELTA=true
+export OPENDELTA=1
 ;;
 2)
 echo "skip OpenDelta"
-export OPENDELTA=false
+export OPENDELTA=2
+;;
+3)
+export OPENDELTA=3
 ;;
 *) invalid option;;
 esac
@@ -111,8 +115,11 @@ START=$(date +%s)
 
 mka bacon 2>&1 | tee build-logs/psd_$DEVICE-$timestamp.txt
 
-if [ "$OPENDELTA" = true ]; then
+if [ "$OPENDELTA" = 1 ]; then
 opendelta.sh $DEVICE
+fi
+if [ "$OPENDELTA" = 3 ];then
+opendeltadev.sh $DEVICE
 fi
 
 END=$(date +%s)
